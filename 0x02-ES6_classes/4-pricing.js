@@ -19,7 +19,7 @@ export default class Pricing {
 
   // setter for amount
   set amount(amount) {
-    if (Number.isNan(amount)) {
+    if (Number.isNaN(amount)) {
       throw new TypeError('Amount must be a number');
     }
     this._amount = amount;
@@ -30,7 +30,7 @@ export default class Pricing {
     if (currency instanceof Currency === false) {
       throw new TypeError('Currency must be a Currency class');
     }
-    this.currency = currency;
+    this._currency = currency;
   }
 
   // method displayFullPrice()
