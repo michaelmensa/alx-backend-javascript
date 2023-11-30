@@ -27,7 +27,7 @@ export default class Pricing {
 
   // setter for currency
   set currency(currency) {
-    if (currency.constructor !== Currency) {
+    if (currency instanceof Currency === false) {
       throw new TypeError('Currency must be a Currency class');
     }
     this.currency = currency;
