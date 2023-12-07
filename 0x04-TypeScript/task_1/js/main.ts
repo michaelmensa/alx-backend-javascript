@@ -7,3 +7,10 @@ export interface Teacher {
     location: string;
     [key: string]: any; // allow addtional attributes
 }
+
+// interface named directors that extends teacher
+// attribute named numberOfReports(number)
+
+export interface Directors extends Teacher {
+    numberOfReports: number;
+}
