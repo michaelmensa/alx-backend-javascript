@@ -14,3 +14,14 @@ export interface Teacher {
 export interface Directors extends Teacher {
     numberOfReports: number;
 }
+
+//function printTeacher: 
+export interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+};
+
+// implement printTeacher function
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    const firstLetter = firstName.charAt(0).toUpperCase();
+    return `${firstLetter}. ${lastName}`;
+}
