@@ -25,3 +25,37 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
     const firstLetter = firstName.charAt(0).toUpperCase();
     return `${firstLetter}. ${lastName}`;
 }
+
+// define studentinterface
+export interface StudentInterface {
+    firstName: string,
+    lastName: string,
+}
+
+// define studentclassinterface
+export interface StudentClassInterface {
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+//implement studentclass
+export class StudentClass implements StudentClassInterface {
+    private firstName: string;
+    private lastName: string;
+
+    constructor(student: StudentInterface) {
+        this.firstName = student.firstName;
+        this.lastName = student.lastName;
+    }
+
+    //method workonhomework
+    workOnHomework(): string {
+        return 'Currently working';
+    }
+
+    //method displayname
+    displayName(): string {
+        return this.firstName;
+    }
+
+}
