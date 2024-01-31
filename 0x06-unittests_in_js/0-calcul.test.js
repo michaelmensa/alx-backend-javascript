@@ -9,7 +9,7 @@ describe('calculateNumber', () => {
     assert.strictEqual(calculateNumber(1, 4.2), 5);
   });
   it('should round and sum two numbers',() => {
-    assert.strictEqual(calculateNumber(1.7, 4), 6);
+    assert.strictEqual(calculateNumber(1.7, 4.2), 6);
   });
   it('should round and sum one negative and one positive number',() => {
     assert.strictEqual(calculateNumber(1.7, -4), -2);
